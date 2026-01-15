@@ -1,0 +1,23 @@
+import {ProfileLink} from './profile-link.model';
+import {Education} from './education.model';
+import {ProfessionalExperience} from './professional-experience.model';
+import {GroupSkill, Skill} from './skill.model';
+import {Language} from './language.model';
+import {Course} from './course.model';
+
+export class Profile {
+  firstName?: string;
+  lastName?: string;
+  img?: string;
+  email?: string;
+  phone?: string;
+  livingPlace?: string;
+  birthDate?: Date;
+  description?: string;
+  profileLinks?: ProfileLink[];
+  education?: Education[];
+  professionalExperiences?: ProfessionalExperience[];
+  courses?: Course[];
+  skillGroupByCategory?: GroupSkill[];
+  languages?: Language[];
+}
