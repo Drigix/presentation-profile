@@ -1,0 +1,73 @@
+@import 'primeflex/primeflex.scss';
+@import "primeflex/themes/primeone-dark.css";
+@import "primeicons/primeicons.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+$app-danger-color: --p-red-400;
+
+$app-border-radius: 8px !default;
+$app-container-margin: 8px !default;
+
+$app-small-details-font-size: 12px !default;
+
+$app-icon-l-font-size: 2rem !default;
+
+:root {
+
+  --bs-body-bg: #0e0e10 !important;
+  --bs-body-color: #ffffff !important;
+
+  --p-primary-text-color: #ffffff !important;
+  --p-primary-icon-color: #ffffff !important;
+  --p-primary-color: #80f8f8 !important;
+  --p-secondary-color: #45c1cc !important;
+  --p-button-primary-active-background: #65bcbf !important;
+  --p-button-primary-hover-background: #32e1cd !important;
+  --p-button-primary-hover-border-color: #65bfb5 !important;
+
+  --p-primary-danger-color: var(--p-red-500);
+
+  --p-rating-icon-size: 2.5rem;
+
+  --normal-border-radius: #{$app-border-radius};
+  --container-margin: #{$app-container-margin};
+  --small-details-font-size: #{$app-small-details-font-size};
+  --icon-l-font-size: #{$app-icon-l-font-size};
+
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --font-size-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+  --font-size-lg: clamp(1.15rem, 1.0rem + 0.6vw, 1.4rem);
+  --font-size-xl: clamp(1.45rem, 1.3rem + 0.9vw, 1.9rem);
+  --font-size-xxl: clamp(1.9rem, 1.6rem + 1.4vw, 2.6rem);
+
+  --transition-fast: 120ms;
+  --transition-base: 240ms;
+  --transition-slow: 420ms;
+
+  --shadow-sm: 0 2px 6px -2px rgba(0,0,0,0.4);
+  --shadow-md: 0 6px 18px -6px rgba(0,0,0,0.35);
+
+  scrollbar-color: var(--p-secondary-color) #0e0e10;
+  scrollbar-width: thin;
+
+  overflow: hidden;
+}
+
+.pi {
+  color: var(--p-primary-color);
+}
