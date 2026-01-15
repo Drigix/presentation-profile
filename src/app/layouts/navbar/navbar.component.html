@@ -1,0 +1,8 @@
+<div class="main-profile-navbar">
+  <div class="welcome-section">
+    <span class="grey-text">{{ 'home.welcome' | translate }}</span>
+    <span class="welcome-names">{{profile?.firstName?.toUpperCase() + ' ' + profile?.lastName?.toUpperCase()}}</span>
+    <span class="work-title-name">{{'home.workTitle' | translate}}</span>
+  </div>
+  <img alt="profile_img" [src]="profile?.img">
+</div>

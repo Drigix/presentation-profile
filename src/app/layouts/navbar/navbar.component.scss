@@ -1,0 +1,27 @@
+.main-profile-navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  backdrop-filter: blur(4px);
+  //position: fixed;
+  //width: 100%;
+  img {
+    height: auto;
+    border-radius: 50%;
+    width: 10rem;
+  }
+}
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome-names {
+  font-size: 40px;
+  color: var(--p-secondary-color);
+}
+
+.work-title-name {
+  font-size: 20px;
+}
