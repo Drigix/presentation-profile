@@ -1,0 +1,31 @@
+.presentation-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin: 0.5rem 0.25rem !important;
+
+  .skill-presentation-card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 0;
+    margin: 0.25rem !important;
+    img {
+      display: block;
+      height: 2.8rem;
+      object-fit: contain;
+      flex: 0 0 auto;
+      border-radius: 25%;
+    }
+  }
+
+  .rating {
+    margin-left: 0.5rem !important;
+  }
+
+  i {
+    font-size: 2.8rem;
+  }
+}

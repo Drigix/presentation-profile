@@ -1,0 +1,68 @@
+.presentation-card-body {
+  position: relative;
+  overflow: visible;
+
+  .presentation-card-img {
+    cursor: pointer;
+    position: absolute;
+    top: -90px;
+    right: -5px;
+    z-index: 2;
+
+    img {
+      height: 5rem;
+      display: block;
+    }
+  }
+
+  .presentation-card-company-img {
+    cursor: pointer;
+    position: absolute;
+    top: -80px;
+    right: -5px;
+    z-index: 2;
+
+    img {
+      height: 2.5rem;
+      display: block;
+    }
+  }
+
+  .presentation-card-course-company-img {
+    cursor: pointer;
+    position: absolute;
+    top: -100px;
+    right: -1px;
+    z-index: 2;
+
+    img {
+      height: 5rem;
+      display: block;
+    }
+  }
+
+  .presentation-card-field {
+    display: flex;
+    align-items: center;
+    margin: 0.25rem !important;
+  }
+
+  .card-skills {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    min-width: 0;
+    img {
+      display: block;
+      height: 1.7rem;
+      object-fit: contain;
+      flex: 0 0 auto;
+      border-radius: 25%;
+    }
+  }
+
+  i {
+    font-size: 1.2rem;
+  }
+}

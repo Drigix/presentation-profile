@@ -1,0 +1,95 @@
+@switch (viewType) {
+  @case('education') {
+    <p-card [header]="education?.title | translate">
+      <div class="m-0 presentation-card-body">
+        <div class="presentation-card-img" (click)="openPage(education?.placeUrl!)">
+          <img alt="education-place-img" [src]="education?.placeImg">
+        </div>
+        <div class="presentation-card-field" [tooltipPosition]="'left'" [pTooltip]="'education.university' | translate ">
+          <i class="pi pi-graduation-cap mr-2"></i>
+          <span>{{education?.place | translate}}</span>
+          <span class="span-brackets ml-1">({{'education.faculty' | translate }} {{education?.faculty | translate}})</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'education.field' | translate ">
+          <i class="pi pi-book mr-2"></i>
+          <span>{{education?.field | translate}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'education.specialization' | translate ">
+          <i class="pi pi-star mr-2"></i>
+          <span>{{education?.specialization | translate}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'education.period' | translate ">
+          <i class="pi pi-calendar mr-2"></i>
+          <span>{{education?.startDate | date: 'mediumDate'}} - {{education?.endDate | date: 'mediumDate'}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'education.rating' | translate ">
+          <i class="pi pi-percentage mr-2"></i>
+          <span>{{education?.avgGrades}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'education.techStack' | translate ">
+          <i class="pi pi-sparkles mr-2"></i>
+          <span class="card-skills">
+            @for (skill of education?.skills; track skill.code) {
+              <img alt="skill-img" [src]="skill?.img" [pTooltip]="skill.label | translate ">
+            }
+          </span>
+        </div>
+        <p class="grey-text m-1">{{education?.description | translate}}</p>
+      </div>
+    </p-card>
+  }
+
+  @case('professionalExperience') {
+    <p-card [header]="professionalExperience?.teamRole | translate">
+      <div class="m-0 presentation-card-body">
+        <div class="presentation-card-company-img" (click)="openPage(professionalExperience?.placeUrl!)">
+          <img alt="experience-place-img" [src]="professionalExperience?.placeImg">
+        </div>
+        <div class="presentation-card-field" [tooltipPosition]="'left'" [pTooltip]="'professionalExperience.company' | translate ">
+          <i class="pi pi-map-marker mr-2"></i>
+          <span>{{professionalExperience?.place | translate}}</span>
+          <span class="span-brackets ml-1">({{professionalExperience?.placeLocation | translate}})</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'professionalExperience.field' | translate ">
+          <i class="pi pi-book mr-2"></i>
+          <span>{{professionalExperience?.field | translate}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'professionalExperience.period' | translate ">
+          <i class="pi pi-calendar mr-2"></i>
+          <span>{{professionalExperience?.startDate | date: 'mediumDate'}} - {{(professionalExperience?.endDate ? (professionalExperience?.endDate | date: 'mediumDate') : 'professionalExperience.currentWorking' | translate)}}</span>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'professionalExperience.techStack' | translate ">
+          <i class="pi pi-sparkles mr-2"></i>
+          <span class="card-skills">
+            @for (skill of professionalExperience?.skills; track skill.code) {
+              <img alt="skill-img" [src]="skill?.img" [pTooltip]="skill.label | translate ">
+            }
+          </span>
+        </div>
+        <p class="grey-text m-1">{{professionalExperience?.description | translate}}</p>
+      </div>
+    </p-card>
+  }
+
+  @case('course') {
+    <p-card [header]="course?.courseName | translate">
+      <div class="m-0 presentation-card-body">
+        <div class="presentation-card-course-company-img" (click)="openPage(course?.companyUrl!)">
+          <img alt="course-place-img" [src]="course?.companyImg">
+        </div>
+        <div class="presentation-card-field" [tooltipPosition]="'left'" [pTooltip]="'course.company' | translate ">
+          <i class="pi pi-map-marker mr-2"></i>
+          <span>{{course?.company | translate}}</span>
+        </div>
+        <div class="presentation-card-field" [tooltipPosition]="'left'"  [pTooltip]="'course.date' | translate ">
+          <i class="pi pi-calendar mr-2"></i>
+          <span>{{course?.date | date: 'mediumDate'}}</span>
+        </div>
+        <p class="grey-text m-1">{{course?.description | translate}}</p>
+        <div class="presentation-card-field">
+          <p-image [src]="course?.courseImg" alt="course-img" width="200" [preview]="true" />
+        </div>
+      </div>
+    </p-card>
+  }
+}
