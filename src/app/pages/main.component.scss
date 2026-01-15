@@ -1,0 +1,27 @@
+.menu-section {
+  margin: auto;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+  left: 30px;
+  i {
+    font-size: 1.5rem;
+  }
+
+  .menu-item {
+    margin: 15px 0;
+  }
+}
+
+.section-header {
+  font-size: 30px;
+  color: var(--p-button-primary-active-background);
+}
+
+.selected-menu-item {
+  border: 1px solid var(--p-button-primary-active-background);
+  border-radius: var(--normal-border-radius);
+}
