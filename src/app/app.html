@@ -1,11 +1,25 @@
-<div>
-  <navbar
-    [profile]="profile()"
-  ></navbar>
-</div>
+<div class="flex w-100">
+  <div class="menu-width">
+    <menu-view
+      #menuComponent
+    ></menu-view>
+  </div>
+  <div class="">
+    <div>
+      <navbar
+        #navbarComponent
+        [profile]="profile()"
+        [selectedMenuItem]="menuComponent.selectedMenuItem()!"
+        [styleClass]="!!menuComponent && menuComponent.selectedMenuItem() && menuComponent.selectedMenuItem()!.key === 'profile' ? 'middle-navbar' : 'top-navbar' "
+      ></navbar>
+    </div>
 
-<div class="main">
-  <main-view
-    [profile]="profile()"
-  ></main-view>
+    <div class="main">
+      <main-view
+        #mainViewComponent
+        [profile]="profile()"
+        [selectedMenuItem]="menuComponent.selectedMenuItem()!"
+      ></main-view>
+    </div>
+  </div>
 </div>
