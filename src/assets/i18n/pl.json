@@ -4,6 +4,7 @@
     "workTitle": "Software Engineer"
   },
   "menu": {
+    "profile": "Profil",
     "aboutMe": "O mnie",
     "education": "Edukacja",
     "professionalExperience": "Doświadczenie zawodowe",
@@ -86,12 +87,20 @@
     "ionic": "Ionic",
     "capacitor": "Capacitor",
     "aws": "AWS",
-    "oci": "Oracle Cloud Infrastructure"
+    "oci": "Oracle Cloud Infrastructure",
+    "agile": "Agile",
+    "scrum": "SCRUM",
+    "jira": "JIRA"
   },
   "course": {
     "company": "Organizator",
     "date": "Data otrzymania",
     "oracleAiFoundationsAssociate": "Kurs wyjaśnia podstawowe pojęcia z zakresu sztucznej inteligencji, przedstawia\nposzczególne przypadki teoretyczne oraz gotowe rozwiązania w praktyce na platformie chmurowej.",
-    "oracleApplicationIntegrationProfessional": "Certyfikat profesjonalny udowadniający szczególną wiedzę z zakresu budowania\nsystemów za pomocą infrastruktury chmurowej przy użyciu interfejsów oraz gotowych\nzooptymalizowanych pod określone przypadki gotowych funkcji"
+    "oracleApplicationIntegrationProfessional": "Certyfikat profesjonalny udowadniający szczególną wiedzę z zakresu budowania\nsystemów za pomocą infrastruktury chmurowej przy użyciu interfejsów oraz gotowych\nzooptymalizowanych pod określone przypadki gotowych funkcji",
+    "oracleDataPlatformFoundationsAssociate": "Zapoznaje użytkownika z pracą z danymi na platformie OCI. Pokazuje, jak\noptymalnie zarządzać przepływem danych, z jakich gotowych funkcji systemu korzystać, oraz przedstawia\nróżne typy baz danych ORACLE.",
+    "oracleCloudInfrastructure": "Kurs Oracle poświęcony dzieleniu się doświadczeniami z zakresu technologii i funkcji chmury obliczeniowej",
+    "awsCloudFoundations": "Kurs AWS wprowadzający użytkowników w system chmury i jego funkcje",
+    "datacampAwsCloudTechnologyAndService": "Kurs poświęcony technologiom i usługom chmury AWS. Rozwija wiedzę na temat globalnej\ninfrastruktury, strategii wdrażania i łączności, optymalizacji zasobów obliczeniowych,\n zarządzania bazami danych i usługami internetowymi oraz analizy danych i uczenia maszynowego\nw chmurze AWS.",
+    "datacampAssociateSql": "Certyfikat potwierdzający znajomość obliczania wskaźników i raportowania charakterystyki danych,\ninterpretacji schematów baz danych, oceny jakości danych, analizowania i czyszczenia danych,\nwydobywania i łączenia agregatów danych przy użyciu języka SQL."
   }
 }

@@ -1,7 +1,7 @@
 @switch (viewType) {
   @case('education') {
     <p-card [header]="education?.title | translate">
-      <div class="m-0 presentation-card-body">
+      <div class="presentation-card-body">
         <div class="presentation-card-img" (click)="openPage(education?.placeUrl!)">
           <img alt="education-place-img" [src]="education?.placeImg">
         </div>
