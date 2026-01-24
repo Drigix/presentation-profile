@@ -20,4 +20,12 @@ export class Profile {
   courses?: Course[];
   skillGroupByCategory?: GroupSkill[];
   languages?: Language[];
+
+  getLinkedinLink(): ProfileLink | undefined {
+    return this.profileLinks?.find(link => link.type === 'linkedin');
+  }
+
+  getGithubLink(): ProfileLink | undefined {
+    return this.profileLinks?.find(link => link.type === 'github');
+  }
 }

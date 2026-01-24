@@ -4,6 +4,7 @@ import {Education} from '../../../models/education.model';
 import {ProfessionalExperience} from '../../../models/professional-experience.model';
 import {Tooltip} from 'primeng/tooltip';
 import {Course} from '../../../models/course.model';
+import {UrlUtils} from '../../utils/url.utils';
 
 @Component({
   selector: 'presentation-card',
@@ -20,6 +21,6 @@ export class PresentationCardComponent {
   @Input() viewType?: 'education' | 'professionalExperience' | 'course';
 
   openPage(url: string): void {
-    window.open(url, '_blank');
+    UrlUtils.openPage(url)
   }
 }
