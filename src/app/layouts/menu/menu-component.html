@@ -1,0 +1,10 @@
+<div class="menu-section grid">
+  @for(menuItem of menuItems(); track menuItem.key) {
+    <div class="menu-item"
+         [pTooltip]="menuItem.label | translate"
+         [ngClass]="{'selected-menu-item': menuItem.key === selectedMenuItem()!.key}"
+         (click)="onMenuItemSelect(menuItem)">
+      <i [ngClass]="menuItem.icon"></i>
+    </div>
+  }
+</div>
