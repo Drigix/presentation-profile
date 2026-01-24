@@ -1,8 +1,41 @@
-<div class="main-profile-navbar">
-  <div class="welcome-section">
-    <span class="grey-text">{{ 'home.welcome' | translate }}</span>
-    <span class="welcome-names">{{profile?.firstName?.toUpperCase() + ' ' + profile?.lastName?.toUpperCase()}}</span>
-    <span class="work-title-name">{{'home.workTitle' | translate}}</span>
+<div class="main-profile-navbar" [ngClass]="styleClass">
+  <div class="top-section">
+    <div class="welcome-section">
+      <span class="grey-text">{{ 'home.welcome' | translate }}</span>
+      <span class="welcome-names">{{profile?.firstName?.toUpperCase() + ' ' + profile?.lastName?.toUpperCase()}}</span>
+      <span class="work-title-name">{{'home.workTitle' | translate}}</span>
+    </div>
+    <img alt="profile_img" [src]="profile?.img">
   </div>
-  <img alt="profile_img" [src]="profile?.img">
+  <div class="bottom-section">
+    @for(link of profile?.profileLinks; track link.type) {
+      <i [ngClass]="link.icon" (click)="openPage(link.url!)" [pTooltip]="link.url"></i>
+    }
+  </div>
+  @if(selectedMenuItem?.key === 'profile') {
+    <div class="bottom-section mt-5">
+      <div class="contact-section">
+        <div class="profile-field">
+          <i class="pi pi-user"></i>
+          <span>{{profile?.firstName + ' ' + profile?.lastName}}</span>
+        </div>
+        <div class="profile-field">
+          <i class="pi pi-calendar"></i>
+          <span>{{profile?.birthDate | date: 'mediumDate'}} ({{DateUtils.calculatePersonAge(profile?.birthDate!)}})</span>
+        </div>
+        <div class="profile-field">
+          <i class="pi pi-map-marker"></i>
+          <span>{{profile?.livingPlace}}</span>
+        </div>
+        <div class="profile-field">
+          <i class="pi pi-envelope"></i>
+          <span>{{profile?.email}}</span>
+        </div>
+        <div class="profile-field">
+          <i class="pi pi-phone"></i>
+          <span>+48 {{profile?.phone}}</span>
+        </div>
+      </div>
+    </div>
+  }
 </div>
