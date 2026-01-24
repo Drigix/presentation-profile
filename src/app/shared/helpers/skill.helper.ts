@@ -25,7 +25,7 @@ export class SkillHelper {
       'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE', 'PYTHON',
       'COSMOSDB', 'NEO4J',
       'GITHUB',
-      'DOCKER', 'KUBERNETES', 'LINUX'
+      'DOCKER', 'KUBERNETES', 'LINUX', 'SCRUM'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }
@@ -49,7 +49,7 @@ export class SkillHelper {
       'JAVA', 'SPRING', 'HIBERNATE', 'MAVEN',
       'ORACLE',
       'GITLAB', 'JENKINS', 'TEAMCITY',
-      'DOCKER'
+      'DOCKER', 'SCRUM', 'JIRA'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }
@@ -101,6 +101,11 @@ export class SkillHelper {
       label: 'skill.mobile',
       skills: SkillHelper.getMobileSkills()
     });
+    skillsGroups.push({
+      techCategory: TechCategory.AGILE,
+      label: 'skill.agile',
+      skills: SkillHelper.getAgileSkills()
+    });
     return skillsGroups;
   }
 
@@ -138,5 +143,9 @@ export class SkillHelper {
 
   public static getMobileSkills(): Skill[] {
     return CONST_SKILLS.filter(skill => skill.techCategory === TechCategory.MOBILE);
+  }
+
+  public static getAgileSkills(): Skill[] {
+    return CONST_SKILLS.filter(skill => skill.techCategory === TechCategory.AGILE);
   }
 }

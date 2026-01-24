@@ -212,4 +212,18 @@ export const CONST_SKILLS: Skill[] = [
     techCategory: TechCategory.CLOUD,
     rating: 3
   },
+  {
+    code: 'SCRUM',
+    label: 'skill.scrum',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlEDCuAu1R7MmGxmDQ-0YdcDNp_ZOD-IQMMQ&s',
+    techCategory: TechCategory.AGILE,
+    rating: 4
+  },
+  {
+    code: 'JIRA',
+    label: 'skill.jira',
+    img: 'https://cdn.worldvectorlogo.com/logos/jira-1.svg',
+    techCategory: TechCategory.AGILE,
+    rating: 4
+  }
 ]

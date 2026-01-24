@@ -9,5 +9,6 @@ export enum TechCategory {
   CLOUD = 'CLOUD',
   MOBILE = 'MOBILE',
   STREAM = 'STREAM',
+  AGILE = 'AGILE',
   OTHER = 'OTHER'
 }
