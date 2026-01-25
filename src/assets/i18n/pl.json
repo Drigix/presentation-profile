@@ -63,6 +63,7 @@
     "angular": "Angular",
     "html": "HTML",
     "primeng": "PrimeNG",
+    "nginx": "nginx",
     "java": "Java",
     "spring": "Spring/Spring Boot",
     "hibernate": "Hibernate / JPA",
