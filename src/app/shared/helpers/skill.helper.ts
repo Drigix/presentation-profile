@@ -45,11 +45,11 @@ export class SkillHelper {
 
   public static getAssecoSkills(): Skill[] {
     const skillCodes = [
-      'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG',
+      'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG', 'NGINX',
       'JAVA', 'SPRING', 'HIBERNATE', 'MAVEN',
       'ORACLE',
       'GITLAB', 'JENKINS', 'TEAMCITY',
-      'DOCKER', 'SCRUM', 'JIRA'
+      'DOCKER', 'KUBERNETES', 'SCRUM', 'JIRA'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }

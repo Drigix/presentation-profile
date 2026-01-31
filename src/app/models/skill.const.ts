@@ -38,6 +38,13 @@ export const CONST_SKILLS: Skill[] = [
     rating: 5
   },
   {
+    code: 'NGINX',
+    label: 'skill.nginx',
+    img: 'https://www.svgrepo.com/show/354115/nginx.svg',
+    techCategory: TechCategory.FRONTEND,
+    rating: 3
+  },
+  {
     code: 'IONIC',
     label: 'skill.ionic',
     img: 'https://cdn.iconscout.com/icon/free/png-256/free-ionic-logo-icon-svg-download-png-2945013.png',
