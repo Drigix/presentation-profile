@@ -220,6 +220,20 @@ export const CONST_SKILLS: Skill[] = [
     rating: 3
   },
   {
+    code: 'ETL',
+    label: 'skill.etl',
+    img: 'https://cdn-icons-png.flaticon.com/512/9850/9850879.png',
+    techCategory: TechCategory.BIGDATA,
+    rating: 3
+  },
+  {
+    code: 'MICROSERVICES',
+    label: 'skill.microservices',
+    img: 'https://cdn-icons-png.flaticon.com/512/6357/6357632.png',
+    techCategory: TechCategory.ARCHITECTURE,
+    rating: 4
+  },
+  {
     code: 'SCRUM',
     label: 'skill.scrum',
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlEDCuAu1R7MmGxmDQ-0YdcDNp_ZOD-IQMMQ&s',

@@ -15,7 +15,7 @@ export class SkillHelper {
       'POSTGRESQL', 'NEO4J',
       'GITHUB',
       'DOCKER',
-      'KAFKA', 'LINUX'
+      'KAFKA', 'LINUX', 'ETL'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }
@@ -50,6 +50,44 @@ export class SkillHelper {
       'ORACLE',
       'GITLAB', 'JENKINS', 'TEAMCITY',
       'DOCKER', 'KUBERNETES', 'SCRUM', 'JIRA'
+    ];
+    return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
+  }
+
+  public static getAreaMonitoringAppSkills(): Skill[] {
+    const skillCodes = [
+      'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG',
+      'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE',
+      'POSTGRESQL',
+      'GITHUB', 'KAFKA', 'MICROSERVICES',
+      'DOCKER',
+    ];
+    return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
+  }
+
+  public static getPersonalAgentAiSkills(): Skill[] {
+    const skillCodes = [
+      'JAVA', 'SPRING', 'GRADLE',
+      'MONGODB',
+      'GITHUB',
+      'DOCKER',
+    ];
+    return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
+  }
+
+  public static getJetsonBasecallingSkills(): Skill[] {
+    const skillCodes = [
+      'PYTHON', 'LINUX',
+      'COSMOSDB',
+      'GITHUB',
+      'DOCKER', 'KUBERNETES'
+    ];
+    return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
+  }
+
+  public static getBlockchainAnalysis(): Skill[] {
+    const skillCodes = [
+      'JAVA', 'NEO4J', 'ETL'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }
@@ -102,6 +140,16 @@ export class SkillHelper {
       skills: SkillHelper.getMobileSkills()
     });
     skillsGroups.push({
+      techCategory: TechCategory.BIGDATA,
+      label: 'skill.bigdata',
+      skills: SkillHelper.getBigDataSkills()
+    });
+    skillsGroups.push({
+      techCategory: TechCategory.ARCHITECTURE,
+      label: 'skill.architecture',
+      skills: SkillHelper.getArchitectureSkills()
+    });
+    skillsGroups.push({
       techCategory: TechCategory.AGILE,
       label: 'skill.agile',
       skills: SkillHelper.getAgileSkills()
@@ -143,6 +191,14 @@ export class SkillHelper {
 
   public static getMobileSkills(): Skill[] {
     return CONST_SKILLS.filter(skill => skill.techCategory === TechCategory.MOBILE);
+  }
+
+  public static getBigDataSkills(): Skill[] {
+    return CONST_SKILLS.filter(skill => skill.techCategory === TechCategory.BIGDATA);
+  }
+
+  public static getArchitectureSkills(): Skill[] {
+    return CONST_SKILLS.filter(skill => skill.techCategory === TechCategory.ARCHITECTURE);
   }
 
   public static getAgileSkills(): Skill[] {
