@@ -7,7 +7,7 @@
     </div>
     <img alt="profile_img" [src]="profile?.img">
   </div>
-  <div class="bottom-section">
+  <div class="link-section" [ngClass]="{'link-section-right': selectedMenuItem?.key !== 'profile'}">
     @for(link of profile?.profileLinks; track link.type) {
       <i [ngClass]="link.icon" (click)="openPage(link.url!)" [pTooltip]="link.url"></i>
     }
