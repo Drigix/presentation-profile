@@ -4,6 +4,7 @@ import {Education} from '../../models/education.model';
 import {ProfessionalExperience} from '../../models/professional-experience.model';
 import {SkillHelper} from './skill.helper';
 import {Course} from '../../models/course.model';
+import {Project} from '../../models/project.model';
 
 export class ProfileHelper {
 
@@ -22,6 +23,7 @@ export class ProfileHelper {
     profile.professionalExperiences = this.buildProfileProfessionalExperiences();
     profile.courses = this.buildProfileCourses();
     profile.skillGroupByCategory = SkillHelper.getSkillsGroupByCategories();
+    profile.projects = this.buildProfileProjects();
     return profile;
   }
 
@@ -124,7 +126,7 @@ export class ProfileHelper {
         companyUrl: 'https://mylearn.oracle.com/ou/home',
         companyImg: 'https://www.svgrepo.com/show/448245/oracle.svg',
         courseName: 'Oracle Cloud Infrastructure 2025 Certified Application Integration Professional',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/ORACLE_APPLICATION_INTEGRATION_PROFESSIONAL.png',
         date: new Date(2025, 9, 1),
         description: 'course.oracleApplicationIntegrationProfessional'
       },
@@ -133,7 +135,7 @@ export class ProfileHelper {
         companyUrl: 'https://mylearn.oracle.com/ou/home',
         companyImg: 'https://www.svgrepo.com/show/448245/oracle.svg',
         courseName: 'Oracle Data Platform 2025 Certified Foundations Associate',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/ORACLE_DATA_FOUNDATIONS_ASSOCIATE.png',
         date: new Date(2025, 7, 1),
         description: 'course.oracleDataPlatformFoundationsAssociate'
       },
@@ -142,7 +144,7 @@ export class ProfileHelper {
         companyUrl: 'https://mylearn.oracle.com/ou/home',
         companyImg: 'https://www.svgrepo.com/show/448245/oracle.svg',
         courseName: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/ORACLE_INFRA_FOUNDATIONS_ASSOCIATE.png',
         date: new Date(2025, 6, 1),
         description: 'course.oracleCloudInfrastructure'
       },
@@ -151,7 +153,7 @@ export class ProfileHelper {
         companyUrl: 'https://aws.amazon.com/?nc2=h_home&refid=0286ac9e-9310-49a6-a802-62e1334c411a',
         companyImg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
         courseName: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/AWS_CLOUD_FOUNDATIONS.png',
         date: new Date(2025, 4, 1),
         description: 'course.awsCloudFoundations'
       },
@@ -169,7 +171,23 @@ export class ProfileHelper {
         companyUrl: 'https://altair.com/',
         companyImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ydUuB0e6yVWOKc5bntlMCIhcGT5orLH5AA&s',
         courseName: 'Data Engineering Master Certication',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/ALTAIR_DATA_ENGINEERING_MASTER_CERTIFICATION.png',
+        date: new Date(2024, 2, 1)
+      },
+      {
+        company: 'Altair',
+        companyUrl: 'https://altair.com/',
+        companyImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ydUuB0e6yVWOKc5bntlMCIhcGT5orLH5AA&s',
+        courseName: 'Data Engineering Professional Certication',
+        courseImg: '../../../assets/images/ALTAIR_DATA_ENGINEERING_PROFESSIONAL_CERTIFICATION.png',
+        date: new Date(2024, 2, 1)
+      },
+      {
+        company: 'Altair',
+        companyUrl: 'https://altair.com/',
+        companyImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ydUuB0e6yVWOKc5bntlMCIhcGT5orLH5AA&s',
+        courseName: 'Machine Learning Professional Certication',
+        courseImg: '../../../assets/images/ALTAIR_ML_PROFESSIONAL_CERTIFICATION.png',
         date: new Date(2024, 2, 1)
       },
       {
@@ -177,10 +195,50 @@ export class ProfileHelper {
         companyUrl: 'https://www.datacamp.com/?utm_cid=805200711&utm_aid=155612384048&utm_campaign=220808_1-ps-brd~brd~branded-pure_2-b2c_3-emea_4-rtw_5-na_6-na_7-le_8-pdsh-go_9-b-e_10-na_11-na&utm_loc=1011536-&utm_mtd=e-c&utm_kw=datacamp&utm_source=google&utm_medium=paid_search&utm_content=ps-other~emea-en~brd~pure~pure&gad_source=1&gad_campaignid=805200711&gbraid=0AAAAADQ9WsG1J1YIsCYPLg-PSmZhJSwrE&gclid=CjwKCAiAvaLLBhBFEiwAYCNTf6wJo7nS4syEAR8kjKing--1hRL4ZbhRZBvLpxLFZBFhqRAuu0NvGRoCuksQAvD_BwE',
         companyImg: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVrhf924c-fjNUvGjrPBAjC4DTh89nrGYUag&s',
         courseName: 'Associate SQL',
-        courseImg: '../../../assets/images/ORACLE_AI_FOUNDATIONS_ASSOCIATE.png',
+        courseImg: '../../../assets/images/DATA_CAMP_SQL_ASSOCIATE.png',
         date: new Date(2024, 3, 1),
         description: 'course.datacampAssociateSql'
       },
+    ];
+  }
+
+  public static buildProfileProjects(): Project[] {
+    return [
+      {
+        id: 'personal-agent-ai',
+        name: 'projects.personalAgentAi',
+        description: 'projects.personalAgentAiDescription',
+        githubUrl: 'https://github.com/Drigix/personal-agent-ai',
+        skills: SkillHelper.getPersonalAgentAiSkills()
+      },
+      {
+        id: 'jetson-basecalling',
+        name: 'projects.jetsonBasecalling',
+        description: 'projects.jetsonBasecallingDescription',
+        githubUrl: 'https://github.com/Drigix/jetson-basecalling',
+        skills: SkillHelper.getJetsonBasecallingSkills()
+      },
+      {
+        id: 'k3s-on-jetson-nano-with-gpu',
+        name: 'projects.k3sOnJetsonNano',
+        description: 'projects.k3sOnJetsonNanoDescription',
+        githubUrl: 'https://github.com/Drigix/k3s-on-jetson-nano-with-gpu',
+        skills: SkillHelper.getJetsonBasecallingSkills()
+      },
+      {
+        id: 'area-monitoring-app',
+        name: 'projects.areaMonitoringApp',
+        description: 'projects.areaMonitoringAppDescription',
+        githubUrl: 'https://github.com/Drigix/area-monitoring-app',
+        skills: SkillHelper.getAreaMonitoringAppSkills()
+      },
+      {
+        id: 'blockchain-analysis',
+        name: 'projects.blockchainAnalysis',
+        description: 'projects.blockchainAnalysisDescription',
+        githubUrl: 'https://github.com/Drigix/BlockchainAnalysis',
+        skills: SkillHelper.getBlockchainAnalysis()
+      }
     ];
   }
 }

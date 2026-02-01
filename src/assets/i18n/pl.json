@@ -9,7 +9,8 @@
     "education": "Edukacja",
     "professionalExperience": "Doświadczenie zawodowe",
     "courses": "Szkolenia/Certyfikaty",
-    "skills": "Umiejętności"
+    "skills": "Umiejętności",
+    "projects": "Projekty"
   },
   "profile": {
     "description": "Jestem absolwentem studiów magisterskich na kierunku informatyka (z wyróżnieniem) na Politechnice Śląskiej, specjalizującym się w inżynierii danych i systemów. Pracuję jako programista Full-Stack w Asseco Poland, dostarczając funkcje internetowe i backendowe przy użyciu TypeScript (Angular), Java (Spring / Spring Boot) oraz relacyjnych baz danych (PostgreSQL, Oracle).\n\n Moje główne zainteresowania obejmują tworzenie niezawodnych, kontenerowych i obserwowalnych platform — zwłaszcza Kubernetes, architektur natywnych dla chmury, mikrousług i potoków przetwarzania danych. Lubię projektować przejrzyste granice usług, integrować bramki komunikacyjne i API oraz poprawiać wydajność i łatwość konserwacji poprzez automatyzację i dobre praktyki inżynieryjne.\n\nCenię pragmatyczne podejście do inżynierii: mierzenie przed optymalizacją, pisanie łatwego w utrzymaniu kodu oraz współpracę w zespołach Agile / Scrum. Obecnie poszerzam swoją wiedzę w zakresie operacji Kubernetes i zaawansowanych wzorców platform chmurowych.\n\nZawsze jestem otwarty na ambitne wyzwania z pogranicza inżynierii oprogramowania, infrastruktury i systemów intensywnie przetwarzających dane.\n\nStaram się poszerzać swoją wiedzę, biorąc udział w różnych szkoleniach i egzaminach certyfikacyjnych, aby jeszcze bardziej pogłębiać swój ciągły rozwój technologiczny."
@@ -89,6 +90,10 @@
     "capacitor": "Capacitor",
     "aws": "AWS",
     "oci": "Oracle Cloud Infrastructure",
+    "bigdata": "Big Data",
+    "etl": "Proces ETL (extract, transform and load)",
+    "architecture": "Architektura",
+    "microservices": "Mikroserwisy",
     "agile": "Agile",
     "scrum": "SCRUM",
     "jira": "JIRA"
@@ -103,5 +108,17 @@
     "awsCloudFoundations": "Kurs AWS wprowadzający użytkowników w system chmury i jego funkcje",
     "datacampAwsCloudTechnologyAndService": "Kurs poświęcony technologiom i usługom chmury AWS. Rozwija wiedzę na temat globalnej\ninfrastruktury, strategii wdrażania i łączności, optymalizacji zasobów obliczeniowych,\n zarządzania bazami danych i usługami internetowymi oraz analizy danych i uczenia maszynowego\nw chmurze AWS.",
     "datacampAssociateSql": "Certyfikat potwierdzający znajomość obliczania wskaźników i raportowania charakterystyki danych,\ninterpretacji schematów baz danych, oceny jakości danych, analizowania i czyszczenia danych,\nwydobywania i łączenia agregatów danych przy użyciu języka SQL."
+  },
+  "projects": {
+    "personalAgentAi": "Lokalny Agent AI",
+    "personalAgentAiDescription": "Prywatny agent ai, oparty na kontenerze ollama, z własną konfiguracją modelu i parametrów wejściowych.",
+    "jetsonBasecalling": "Identyfikacja sekwencji DNA w procesie basecallingu na brzegowych klastrach kubernetes",
+    "jetsonBasecallingDescription": "Eksperymentalna platforma przetwarzania brzegowego, która wdraża wiele modeli bazowych DNA/RNA opartych na sieciach neuronowych w klastrze urządzeń NVIDIA Jetson Nano. Projekt bada wykonalność, wydajność, energooszczędność i automatyzację wdrażania wnioskowania sekwencji nukleotydów nanoporowych (FAST5) na brzegu sieci, zamiast polegać na scentralizowanych serwerach GPU. K3s – lekka platforma Kubernetes – znacząco ułatwia zarządzanie infrastrukturą klastra i orkiestracji kontenerów.",
+    "k3sOnJetsonNano": "Konfiguracja klastra K3s z GPU na urządzeniach NVIDIA Jetson Nano",
+    "k3sOnJetsonNanoDescription": "Instrukcja w pełnij działającej konfiguracji klastra K3s na urządzeniach brzegowych NVIDIA Jetson Nano z wykorzystaniem GPU. Konfiguracja obejmuje urządzenie sterujące (master node) oraz urządzenia robocze (worker nodes)",
+    "areaMonitoringApp": "Aplikacja monitorująca obszary",
+    "areaMonitoringAppDescription": "This is an application for controlling data from monitoring areas using Ultra Wideband technology. It is a web application with an Angular framework-based interface. The server-side of the application has been developed using Java Spring Boot with a microservices architecture, and all data is managed in a PostgreSQL database. All the message to user are sending by asynchronous message queue by Apache Kafka. This is my Engineering work, and I have personally written all the code.",
+    "blockchainAnalysis": "Analiza danych blockchain",
+    "blockchainAnalysisDescription": "Aplikacja ekstraktuje dane blockchain z publicznego API, następnie przekształca tylko dane potrzebne do analizy po czym następuje zapis do bazy grafowej Neo4j. Aplikacja powstała w celu realizacji projektu detekcji anomali w sieci blockchain."
   }
 }

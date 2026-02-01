@@ -4,6 +4,7 @@ import {ProfessionalExperience} from './professional-experience.model';
 import {GroupSkill, Skill} from './skill.model';
 import {Language} from './language.model';
 import {Course} from './course.model';
+import {Project} from './project.model';
 
 export class Profile {
   firstName?: string;
@@ -19,6 +20,7 @@ export class Profile {
   professionalExperiences?: ProfessionalExperience[];
   courses?: Course[];
   skillGroupByCategory?: GroupSkill[];
+  projects?: Project[];
   languages?: Language[];
 
   getLinkedinLink(): ProfileLink | undefined {
