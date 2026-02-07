@@ -1,78 +1,81 @@
-<!--<div class="menu-section grid">-->
-<!--    @for(menuItem of menuItems(); track menuItem.key) {-->
-<!--      <div class="menu-item"-->
-<!--           [pTooltip]="menuItem.label | translate"-->
-<!--           [ngClass]="{'selected-menu-item': menuItem.key === selectedMenuItem()!.key}"-->
-<!--           (click)="onMenuItemSelect(menuItem)">-->
-<!--        <i [ngClass]="menuItem.icon"></i>-->
-<!--      </div>-->
-<!--    }-->
-<!--</div>-->
-
 <div class="mt-12">
-  @switch (selectedMenuItem!.key) {
-    @case('aboutme') {
-      <div class="my-5" #aboutme>
-        <div class="section-header my-3">
-          {{'menu.aboutMe' | translate }}
+    @switch (selectedMenuItem!.key) {
+      @case('aboutme') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #aboutme>
+          <div class="section-header my-3">
+            {{'menu.aboutMe' | translate }}
+          </div>
+          <div class="section-details">
+        <span class="profile-description">
+          {{ profile?.description | translate }}
+        </span>
+          </div>
         </div>
-        <div class="section-details">
-      <span class="profile-description">
-        {{ profile?.description | translate }}
-      </span>
+      }
+      @case('education') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #education>
+          <div class="section-header my-3">
+            {{'menu.education' | translate }}
+          </div>
+          <div class="education-details grid">
+            @for(education of profile?.education; track education.specialization) {
+              <presentation-card class="col-12 my-3 anim-item" [viewType]="'education'" [education]="education"></presentation-card>
+            }
+          </div>
         </div>
-      </div>
-    }
-    @case('education') {
-      <div class="my-5" #education>
-        <div class="section-header my-3">
-          {{'menu.education' | translate }}
+      }
+      @case('experience') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #experience>
+          <div class="section-header my-3">
+            {{'menu.professionalExperience' | translate }}
+          </div>
+          <div class="education-details grid">
+            @for(professionalExperience of profile?.professionalExperiences; track professionalExperience.place) {
+              <presentation-card class="col-12 my-3" [viewType]="'professionalExperience'" [professionalExperience]="professionalExperience"></presentation-card>
+            }
+          </div>
         </div>
-        <div class="education-details grid">
-          @for(education of profile?.education; track education.specialization) {
-            <presentation-card class="col-12 my-3" [viewType]="'education'" [education]="education"></presentation-card>
-          }
-        </div>
-      </div>
-    }
-    @case('experience') {
-      <div class="my-5" #experience>
-        <div class="section-header my-3">
-          {{'menu.professionalExperience' | translate }}
-        </div>
-        <div class="education-details grid">
-          @for(professionalExperience of profile?.professionalExperiences; track professionalExperience.place) {
-            <presentation-card class="col-12 my-3" [viewType]="'professionalExperience'" [professionalExperience]="professionalExperience"></presentation-card>
-          }
-        </div>
-      </div>
-    }
+      }
 
-    @case('course') {
-      <div class="my-5" #skills>
-        <div class="section-header my-3">
-          {{'menu.courses' | translate }}
+      @case('course') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #skills>
+          <div class="section-header my-3">
+            {{'menu.courses' | translate }}
+          </div>
+          <div class="education-details grid">
+            @for(course of profile?.courses; track course.courseName) {
+              <presentation-card class="col-12 my-3" [viewType]="'course'" [course]="course"></presentation-card>
+            }
+          </div>
         </div>
-        <div class="education-details grid">
-          @for(course of profile?.courses; track course.courseName) {
-            <presentation-card class="col-12 my-3" [viewType]="'course'" [course]="course"></presentation-card>
-          }
-        </div>
-      </div>
-    }
+      }
 
-    @case('skills') {
-      <div class="my-5" #skills>
-        <div class="section-header my-3">
-          {{'menu.skills' | translate }}
+      @case('skills') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #skills>
+          <div class="section-header my-3">
+            {{'menu.skills' | translate }}
+          </div>
+          <div class="education-details grid">
+            @for(skillGroupByCategory of profile?.skillGroupByCategory; track skillGroupByCategory.techCategory) {
+              <skill-presentation-card class="col-4" [title]="skillGroupByCategory.label" [skills]="skillGroupByCategory.skills">
+              </skill-presentation-card>
+            }
+          </div>
         </div>
-        <div class="education-details grid">
-          @for(skillGroupByCategory of profile?.skillGroupByCategory; track skillGroupByCategory.techCategory) {
-            <skill-presentation-card class="col-4" [title]="skillGroupByCategory.label" [skills]="skillGroupByCategory.skills">
-            </skill-presentation-card>
-          }
+      }
+
+      @case('projects') {
+        <div class="my-5" [ngClass]="animateMenuItemClass" #projects>
+          <div class="section-header my-3">
+            {{'menu.projects' | translate }}
+          </div>
+          <div class="education-details grid">
+            @for(project of profile?.projects; track project.id) {
+              <presentation-card class="col-12 my-3" [viewType]="'project'" [project]="project">
+              </presentation-card>
+            }
+          </div>
         </div>
-      </div>
+      }
     }
-  }
 </div>
