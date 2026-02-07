@@ -3,6 +3,10 @@
     "welcome": "Cześć! Jestem",
     "workTitle": "Software Engineer"
   },
+  "language": {
+    "polish": "Polski",
+    "english": "Angielski"
+  },
   "menu": {
     "profile": "Profil",
     "aboutMe": "O mnie",

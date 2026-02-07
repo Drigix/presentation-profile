@@ -1,0 +1,24 @@
+{
+  "home": {
+    "welcome": "Hello! I am",
+    "workTitle": "Software Engineer"
+  },
+  "language": {
+    "polish": "Polish",
+    "english": "English"
+  },
+  "menu": {
+    "profile": "Profile",
+    "aboutMe": "About me",
+    "education": "Education",
+    "professionalExperience": "Professional experience",
+    "courses": "Training/Certificates",
+    "skills": "Skills",
+    "projects": "Projects"
+  },
+  "projects": {
+    "jetsonBasecallingDescription": "An experimental edge computing platform that deploys multiple neural network DNA/RNA basecalling models on a cluster of NVIDIA Jetson Nano devices. The project explores feasibility, performance, energy efficiency, and deployment automation of nanopore signal (FAST5) → nucleotide sequence inference at the network edge rather than relying on centralized GPU servers. K3s - lightweight of kubernetes - help a lot to manage infrastructure of cluster and container orchestration.",
+    "areaMonitoringApp": "Area monitoring application",
+    "areaMonitoringAppDescription": "This is an application for controlling data from monitoring areas using Ultra Wideband technology. It is a web application with an Angular framework-based interface. The server-side of the application has been developed using Java Spring Boot with a microservices architecture, and all data is managed in a PostgreSQL database. All the message to user are sending by asynchronous message queue by Apache Kafka. This is my Engineering work, and I have personally written all the code."
+  }
+}
