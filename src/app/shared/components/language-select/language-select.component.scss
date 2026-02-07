@@ -1,0 +1,26 @@
+:host ::ng-deep .p-select-label {
+  height: 44px;
+  width: 44px;
+}
+
+:host ::ng-deep .p-select-dropdown {
+  display: none;
+}
+
+.language-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  img {
+    width: 25px;
+    height: 25px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: var(--normal-border-radius);
+    display: block;
+  }
+}

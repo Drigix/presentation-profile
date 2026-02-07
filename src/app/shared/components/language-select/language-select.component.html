@@ -1,0 +1,17 @@
+<div class="card flex justify-content-center">
+  <p-select [options]="languages" [(ngModel)]="selectedLanguage" (ngModelChange)="onLanguageChange()" optionLabel="name" placeholder="Select a country" class="w-full md:w-56">
+    <ng-template #selectedItem let-selectedOption>
+      @if(selectedOption) {
+        <div class="language-option">
+          <img [src]="selectedOption.img" [class]="'flag flag-' + selectedOption.code.toLowerCase()"/>
+        </div>
+      }
+    </ng-template>
+    <ng-template let-language #item>
+      <div class="language-option">
+        <img [src]="language.img" [class]="'flag flag-' + language.code.toLowerCase()" />
+        <div>{{ language.name | translate }}</div>
+      </div>
+    </ng-template>
+  </p-select>
+</div>

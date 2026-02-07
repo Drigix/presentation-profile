@@ -1,4 +1,7 @@
 <div class="menu-section grid">
+  <div class="menu-item">
+    <language-select></language-select>
+  </div>
   @for(menuItem of menuItems(); track menuItem.key) {
     <div class="menu-item"
          [pTooltip]="menuItem.label | translate"

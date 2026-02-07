@@ -1,14 +1,17 @@
 import {Component, OnInit, signal} from '@angular/core';
-import {COMMON_IMPORTS, PRIMENG_OVERLAY_COMPONENTS} from '../../shared/primeng-module-import';
+import {
+  COMMON_IMPORTS,
+  LANGUAGE_COMPONENTS,
+  PRIMENG_OVERLAY_COMPONENTS
+} from '../../shared/primeng-module-import';
 import {MenuItem} from '../../models/menu-item.model';
-import {Tooltip} from 'primeng/tooltip';
 
 @Component({
   selector: 'menu-view',
   templateUrl: 'menu-component.html',
   styleUrls: ['./menu-component.scss'],
   standalone: true,
-  imports: [COMMON_IMPORTS, PRIMENG_OVERLAY_COMPONENTS]
+  imports: [COMMON_IMPORTS, PRIMENG_OVERLAY_COMPONENTS, LANGUAGE_COMPONENTS]
 })
 export class MenuComponent  implements OnInit {
 
@@ -55,6 +58,11 @@ export class MenuComponent  implements OnInit {
         key: 'skills',
         label: 'menu.skills',
         icon: 'pi pi-sparkles'
+      },
+      {
+        key: 'projects',
+        label: 'menu.projects',
+        icon: 'pi pi-hammer',
       }
     ]
   }
