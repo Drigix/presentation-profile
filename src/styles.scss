@@ -1,6 +1,7 @@
 @import 'primeflex/primeflex.scss';
 @import "primeflex/themes/primeone-dark.css";
 @import "primeicons/primeicons.css";
+@import "animate.css/animate.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 * {
@@ -29,6 +30,7 @@ $app-icon-l-font-size: 2rem !default;
   --p-button-primary-active-background: #65bcbf !important;
   --p-button-primary-hover-background: #32e1cd !important;
   --p-button-primary-hover-border-color: #65bfb5 !important;
+  --p-select-option-selected-background: #1e7b80 !important;
 
   --p-primary-danger-color: var(--p-red-500);
 

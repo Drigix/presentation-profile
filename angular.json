@@ -32,7 +32,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/scss/global.scss"
+              "src/assets/scss/global.scss",
+              "node_modules/animate.css/animate.min.css"
             ]
           },
           "configurations": {
@@ -92,7 +93,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/scss/global.scss"
+              "src/assets/scss/global.scss",
+              "node_modules/animate.css/animate.min.css"
             ]
           }
         }
