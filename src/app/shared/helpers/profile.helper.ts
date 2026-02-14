@@ -5,6 +5,8 @@ import {ProfessionalExperience} from '../../models/professional-experience.model
 import {SkillHelper} from './skill.helper';
 import {Course} from '../../models/course.model';
 import {Project} from '../../models/project.model';
+import {Language} from '../../models/language.model';
+import {MY_LANGUAGE_LIST} from '../../models/language.const';
 
 export class ProfileHelper {
 
@@ -16,7 +18,7 @@ export class ProfileHelper {
     profile.phone = '791672387';
     profile.livingPlace = 'Gliwice';
     profile.img = '../../../assets/images/profile_img.png';
-    profile.description = 'profile.description';
+    profile.description = this.buildProfileDescription();
     profile.birthDate = new Date(2001, 6, 2);
     profile.profileLinks = this.buildProfileLinks();
     profile.education = this.buildProfileEducation();
@@ -24,7 +26,17 @@ export class ProfileHelper {
     profile.courses = this.buildProfileCourses();
     profile.skillGroupByCategory = SkillHelper.getSkillsGroupByCategories();
     profile.projects = this.buildProfileProjects();
+    profile.languages = this.buildProfileLanguages();
     return profile;
+  }
+
+  public static buildProfileDescription(): string[] {
+    return [
+      'profile.description1',
+      'profile.description3',
+      'profile.description2',
+      'profile.description4',
+    ]
   }
 
   public static buildProfileLinks(): ProfileLink[] {
@@ -240,5 +252,9 @@ export class ProfileHelper {
         skills: SkillHelper.getBlockchainAnalysis()
       }
     ];
+  }
+
+  public static buildProfileLanguages(): Language[] {
+    return MY_LANGUAGE_LIST;
   }
 }

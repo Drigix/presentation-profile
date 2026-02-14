@@ -14,7 +14,8 @@ export class Profile {
   phone?: string;
   livingPlace?: string;
   birthDate?: Date;
-  description?: string;
+  description?: string[];
+  mainSkills?: Skill[];
   profileLinks?: ProfileLink[];
   education?: Education[];
   professionalExperiences?: ProfessionalExperience[];
