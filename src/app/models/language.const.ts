@@ -1,17 +1,23 @@
 import {Language} from './language.model';
 
-export const MY_LANGUAGE_LIST = [
+export const MY_LANGUAGE_LIST: Language[] = [
   {
     code: 'PL',
     name: 'language.polish',
     img: '../../assets/images/pl-flag.png',
-    knowledge: 5
+    knowledge: 'C2'
   },
   {
     code: 'UK',
     name: 'language.english',
     img: '../../assets/images/uk-flag.png',
-    knowledge: 4
+    knowledge: 'B2/C1'
+  },
+  {
+    code: 'DE',
+    name: 'language.germany',
+    img: '../../assets/images/germany-flag.png',
+    knowledge: 'A2'
   }
 ]
 
