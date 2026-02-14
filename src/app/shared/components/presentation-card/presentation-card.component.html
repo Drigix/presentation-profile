@@ -92,4 +92,27 @@
       </div>
     </p-card>
   }
+
+  @case('project') {
+    <p-card [header]="project?.name | translate">
+      <div class="m-0 presentation-card-body">
+        <div class="presentation-card-course-company-img" (click)="openPage(project?.githubUrl!)">
+          <img alt="course-place-img" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">
+        </div>
+        <div class="presentation-card-field">
+          <i class="pi pi-github mr-2"></i>
+          <i class="pi pi-link cursor-pointer" (click)="openPage(project?.githubUrl!)"></i>
+        </div>
+        <div class="presentation-card-field" [pTooltip]="'professionalExperience.techStack' | translate ">
+          <i class="pi pi-sparkles mr-2"></i>
+          <span class="card-skills">
+            @for (skill of project?.skills; track skill.code) {
+              <img alt="skill-img" [src]="skill?.img" [pTooltip]="skill.label | translate ">
+            }
+          </span>
+        </div>
+        <p class="grey-text m-1">{{project?.description | translate}}</p>
+      </div>
+    </p-card>
+  }
 }

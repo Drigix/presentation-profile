@@ -5,6 +5,7 @@ import {ProfessionalExperience} from '../../../models/professional-experience.mo
 import {Tooltip} from 'primeng/tooltip';
 import {Course} from '../../../models/course.model';
 import {UrlUtils} from '../../utils/url.utils';
+import {Project} from '../../../models/project.model';
 
 @Component({
   selector: 'presentation-card',
@@ -18,7 +19,8 @@ export class PresentationCardComponent {
   @Input() education?: Education;
   @Input() professionalExperience?: ProfessionalExperience;
   @Input() course?: Course;
-  @Input() viewType?: 'education' | 'professionalExperience' | 'course';
+  @Input() project?: Project;
+  @Input() viewType?: 'education' | 'professionalExperience' | 'course' | 'project';
 
   openPage(url: string): void {
     UrlUtils.openPage(url)
