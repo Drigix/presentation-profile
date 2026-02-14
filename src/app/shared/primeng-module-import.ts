@@ -35,6 +35,11 @@ import {PresentationCardComponent} from './components/presentation-card/presenta
 import {SkillPresentationCardComponent} from './components/skill-presentation-card/skill-presentation-card.component';
 import {Rating} from 'primeng/rating';
 import {Image} from 'primeng/image';
+import {Select} from 'primeng/select';
+import {LanguageSelectComponent} from './components/language-select/language-select.component';
+import {
+  LanguagePresentationCardComponent
+} from './components/language-presentation-card/language-presentation-card.component';
 
 export const COMMON_IMPORTS =
   [CommonModule, RouterModule, TranslateDirective, TranslatePipe, Skeleton];
@@ -46,7 +51,7 @@ export const PRIMENG_BUTTONS_COMPONENTS =
   [Button, RadioButton, Checkbox, SplitButton];
 
 export const PRIMENG_LABEL_COMPONENTS =
-  [AutoComplete, FloatLabel, InputNumber, InputText, Textarea, DatePicker, CascadeSelect, MultiSelect];
+  [AutoComplete, FloatLabel, InputNumber, InputText, Textarea, DatePicker, CascadeSelect, Select, MultiSelect];
 
 export const PRIMENG_PANEL_COMPONENTS =
   [Accordion, Card, Divider, Tabs, TabPanels, TabPanel, Tab, TabList];
@@ -66,4 +71,6 @@ export const PRIME_IMAGE_COMPONENTS = [Image];
 
 export const PRIMENG_RATING_COMPONENTS = [Rating];
 
-export const CUSTOM_COMPONENTS = [PresentationCardComponent, SkillPresentationCardComponent];
+export const CUSTOM_COMPONENTS = [PresentationCardComponent, SkillPresentationCardComponent, LanguagePresentationCardComponent];
+
+export const LANGUAGE_COMPONENTS = [LanguageSelectComponent];
