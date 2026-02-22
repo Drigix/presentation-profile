@@ -115,6 +115,20 @@ export const CONST_SKILLS: Skill[] = [
     rating: 3
   },
   {
+    code: 'SQL',
+    label: 'skill.sql',
+    img: 'https://www.netgen.co.za/wp-content/uploads/2023/05/SQL-Database.png',
+    techCategory: TechCategory.DATABASE,
+    rating: 5
+  },
+  {
+    code: 'NOSQL',
+    label: 'skill.nosql',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9JPvJlSghEMchVqPm8vZ6bIncHiwj8_plg&s',
+    techCategory: TechCategory.DATABASE,
+    rating: 4
+  },
+  {
     code: 'POSTGRESQL',
     label: 'skill.postgresql',
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1163px-Postgresql_elephant.svg.png',
@@ -204,6 +218,13 @@ export const CONST_SKILLS: Skill[] = [
     img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/3840px-Kubernetes_logo_without_workmark.svg.png',
     techCategory: TechCategory.CONTAINERS,
     rating: 3.5
+  },
+  {
+    code: 'CLOUD',
+    label: 'skill.cloudComputing',
+    img: 'https://www.dragon1.com/images/cloud-computing-icon.png',
+    techCategory: TechCategory.CLOUD,
+    rating: 3
   },
   {
     code: 'AWS',

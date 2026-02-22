@@ -13,14 +13,23 @@
             }
           </div>
           <div class="grid">
-            <div class="col-6"></div>
-            <div class="col-6">
+            <div class="col-6 md:col-6 sm:col-12">
+              <div class="section-header my-5">
+                {{'profile.mainSkills' | translate }}
+              </div>
+              <div class="grid gap-2 justify-content-center">
+                @for (mainSkill of profile?.mainSkills; track mainSkill.code) {
+                  <skill-presentation-card class="col-2 md:col-3 sm:col-6 xs:col-12" [mainSkill]="mainSkill" [type]="'main'"></skill-presentation-card>
+                }
+              </div>
+            </div>
+            <div class="col-6 md:col-6 sm:col-12">
               <div class="section-header my-5">
                 {{'profile.languages' | translate }}
               </div>
-              <div class="flex gap-4 justify-content-center">
+              <div class="grid gap-4 justify-content-center">
                 @for (language of profile?.languages; track language.code) {
-                  <language-presentation-card-component [language]="language"></language-presentation-card-component>
+                  <language-presentation-card-component class="col-3 md:col-3 sm:col-12" [language]="language"></language-presentation-card-component>
                 }
               </div>
             </div>

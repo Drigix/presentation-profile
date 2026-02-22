@@ -19,4 +19,6 @@ export class SkillPresentationCardComponent {
 
   @Input() title?: string;
   @Input() skills?: Skill[] = [];
+  @Input() mainSkill?: Skill;
+  @Input() type?: 'all' | 'main' = 'all';
 }

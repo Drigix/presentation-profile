@@ -8,11 +8,23 @@ export class SkillHelper {
     return CONST_SKILLS;
   }
 
+  public static getMainSkills(): Skill[] {
+    const skillCodes = [
+      'JAVASCRIPT', 'TYPESCRIPT', 'ANGULAR',
+      'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE', 'MAVEN',
+      'SQL', 'NOSQL',
+      'GITHUB', 'GITLAB',
+      'DOCKER', 'KUBERNETES',
+      'CLOUD'
+    ];
+    return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
+  }
+
   public static getEngineerSkills(): Skill[] {
     const skillCodes = [
       'JAVASCRIPT', 'TYPESCRIPT', 'ANGULAR',
       'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE',
-      'POSTGRESQL', 'NEO4J',
+      'SQL', 'NOSQL', 'POSTGRESQL', 'NEO4J',
       'GITHUB',
       'DOCKER',
       'KAFKA', 'LINUX', 'ETL'
@@ -23,7 +35,7 @@ export class SkillHelper {
   public static getMasterSkills(): Skill[] {
     const skillCodes = [
       'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE', 'PYTHON',
-      'COSMOSDB', 'NEO4J',
+      'NOSQL', 'COSMOSDB', 'NEO4J',
       'GITHUB',
       'DOCKER', 'KUBERNETES', 'LINUX', 'SCRUM'
     ];
@@ -34,7 +46,7 @@ export class SkillHelper {
     const skillCodes = [
       'JAVASCRIPT', 'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG',
       'JAVA', 'SPRING', 'HIBERNATE', 'NESTJS', 'GRADLE',
-      'POSTGRESQL', 'MYSQL', 'MONGODB',
+      'SQL', 'NOSQL', 'POSTGRESQL', 'MYSQL', 'MONGODB',
       'GITLAB', 'JENKINS',
       'DOCKER',
       'IONIC', 'CAPACITOR',
@@ -47,7 +59,7 @@ export class SkillHelper {
     const skillCodes = [
       'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG', 'NGINX',
       'JAVA', 'SPRING', 'HIBERNATE', 'MAVEN',
-      'ORACLE',
+      'SQL', 'ORACLE',
       'GITLAB', 'JENKINS', 'TEAMCITY',
       'DOCKER', 'KUBERNETES', 'SCRUM', 'JIRA'
     ];
@@ -58,7 +70,7 @@ export class SkillHelper {
     const skillCodes = [
       'TYPESCRIPT', 'ANGULAR', 'HTML', 'PRIMENG',
       'JAVA', 'SPRING', 'HIBERNATE', 'GRADLE',
-      'POSTGRESQL',
+      'SQL', 'POSTGRESQL',
       'GITHUB', 'KAFKA', 'MICROSERVICES',
       'DOCKER',
     ];
@@ -68,7 +80,7 @@ export class SkillHelper {
   public static getPersonalAgentAiSkills(): Skill[] {
     const skillCodes = [
       'JAVA', 'SPRING', 'GRADLE',
-      'MONGODB',
+      'NOSQL', 'MONGODB',
       'GITHUB',
       'DOCKER',
     ];
@@ -87,7 +99,7 @@ export class SkillHelper {
 
   public static getBlockchainAnalysis(): Skill[] {
     const skillCodes = [
-      'JAVA', 'NEO4J', 'ETL'
+      'JAVA', 'NOSQL', 'NEO4J', 'ETL'
     ];
     return CONST_SKILLS.filter(skill => skillCodes.includes(skill.code!));
   }

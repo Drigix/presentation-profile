@@ -1,12 +1,24 @@
-<p-card [header]="title! | translate">
-  @for (skill of skills; track skill.code) {
-    <div class="m-0 presentation-card-body" [pTooltip]="skill.label | translate">
-      <div class="skill-presentation-card-img">
-        <img alt="skill-img" [src]="skill?.img">
-      </div>
-      <div class="rating">
-        <p-rating [ngModelOptions]="{standalone: true}" [(ngModel)]="skill.rating" [readonly]="true"></p-rating>
-      </div>
-    </div>
+@switch (type) {
+  @case ('all') {
+    <p-card [header]="title! | translate">
+      @for (skill of skills; track skill.code) {
+        <div class="m-0 presentation-card-body" [pTooltip]="skill.label | translate">
+          <div class="skill-presentation-card-img">
+            <img alt="skill-img" [src]="skill?.img">
+          </div>
+          <div class="rating">
+            <p-rating [ngModelOptions]="{standalone: true}" [(ngModel)]="skill.rating" [readonly]="true"></p-rating>
+          </div>
+        </div>
+      }
+    </p-card>
   }
-</p-card>
+  @case ('main') {
+    <p-card>
+      <div class="m-0 main-skill-card-body">
+        <img alt="skill-img" [src]="mainSkill?.img">
+        <p class="grey-text m-1">{{mainSkill?.label | translate}}</p>
+      </div>
+    </p-card>
+  }
+}

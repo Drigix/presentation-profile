@@ -27,6 +27,7 @@ export class ProfileHelper {
     profile.skillGroupByCategory = SkillHelper.getSkillsGroupByCategories();
     profile.projects = this.buildProfileProjects();
     profile.languages = this.buildProfileLanguages();
+    profile.mainSkills = SkillHelper.getMainSkills();
     return profile;
   }
 
