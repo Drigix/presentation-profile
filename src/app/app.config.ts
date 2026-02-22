@@ -28,13 +28,13 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     provideHttpClient(),
     provideTranslateService({
-      lang: 'pl',
-      fallbackLang: 'pl',
+      lang: 'en',
+      fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: 'assets/i18n/',
         suffix: '.json'
       })
     }),
-    { provide: LOCALE_ID, useValue: 'pl' }
+    { provide: LOCALE_ID, useValue: 'en' }
   ]
 };

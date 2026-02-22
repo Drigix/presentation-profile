@@ -17,6 +17,7 @@
     "projects": "Projekty"
   },
   "profile": {
+    "mainSkills": "Główne technologie",
     "languages": "Języki",
     "description1": "Jestem absolwentem studiów magisterskich na kierunku informatyka (z wyróżnieniem) na Politechnice Śląskiej, specjalizującym się w inżynierii danych i systemów. Pracuję jako iżynier oprogramowania (rola Full-Stack) w Asseco Poland, dostarczając funkcje internetowe i serwerowe przy użyciu TypeScript (Angular), Java (Spring / Spring Boot) oraz relacyjnych baz danych (PostgreSQL, Oracle).",
     "description2": "Moje główne zainteresowania obejmują tworzenie niezawodnych, kontenerowych i obserwowalnych platform — zwłaszcza Kubernetes, architektur natywnych dla chmury, mikrousług i potoków przetwarzania danych. Lubię projektować przejrzyste granice usług, integrować bramki komunikacyjne i API oraz poprawiać wydajność i łatwość konserwacji poprzez automatyzację i dobre praktyki inżynieryjne.",
@@ -81,6 +82,8 @@
     "gradle": "Gradle",
     "maven": "Maven",
     "kafka": "Apache Kafka",
+    "sql": "SQL",
+    "nosql": "NoSQL",
     "postgresql": "PostgreSQL",
     "mysql": "MySQL",
     "oracle": "ORACLE",
@@ -96,6 +99,7 @@
     "kubernetes": "Kubernetes",
     "ionic": "Ionic",
     "capacitor": "Capacitor",
+    "cloudComputing": "Przetwarzanie chmurowe",
     "aws": "AWS",
     "oci": "Oracle Cloud Infrastructure",
     "bigdata": "Big Data",
