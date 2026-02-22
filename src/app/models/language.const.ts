@@ -10,7 +10,7 @@ export const MY_LANGUAGE_LIST: Language[] = [
   {
     code: 'UK',
     name: 'language.english',
-    img: '../../assets/images/uk-flag.png',
+    img: '../../assets/images/UK-flag.png',
     knowledge: 'B2/C1'
   },
   {
@@ -30,6 +30,6 @@ export const LANGUAGE_APP_LIST = [
   {
     code: 'UK',
     name: 'language.english',
-    img: '../../assets/images/uk-flag.png'
+    img: '../../assets/images/UK-flag.png'
   }
 ]
