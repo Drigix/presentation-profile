@@ -5,10 +5,25 @@
           <div class="section-header my-3">
             {{'menu.aboutMe' | translate }}
           </div>
-          <div class="section-details">
-        <span class="profile-description">
-          {{ profile?.description | translate }}
-        </span>
+          <div class="flex flex-column gap-3">
+            @for (description of profile?.description; track description) {
+              <span class="profile-description">
+                {{ description | translate }}
+              </span>
+            }
+          </div>
+          <div class="grid">
+            <div class="col-6"></div>
+            <div class="col-6">
+              <div class="section-header my-5">
+                {{'profile.languages' | translate }}
+              </div>
+              <div class="flex gap-4 justify-content-center">
+                @for (language of profile?.languages; track language.code) {
+                  <language-presentation-card-component [language]="language"></language-presentation-card-component>
+                }
+              </div>
+            </div>
           </div>
         </div>
       }
