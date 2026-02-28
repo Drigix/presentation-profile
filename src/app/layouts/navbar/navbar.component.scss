@@ -3,18 +3,27 @@
   flex-direction: column;
   position: fixed;
   width: 92%;
-  img {
-    height: auto;
-    //border-radius: 50%;
-    width: 10rem;
-  }
+  overflow: hidden;
   z-index: 1000;
   transition: top 0.6s ease-in-out, transform 0.6s ease-in-out;
+
+  img {
+    height: auto;
+    max-width: 10rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: max-width 0.3s ease;
+    margin-right: 110px;
+  }
+
   .top-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
+
   .bottom-section {
     display: flex;
     justify-content: center;
@@ -41,15 +50,18 @@
 .welcome-section {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .welcome-names {
-  font-size: 40px;
+  font-size: clamp(1.2rem, 4vw, 40px);
   color: var(--p-secondary-color);
+  word-break: break-word;
 }
 
 .work-title-name {
-  font-size: 20px;
+  font-size: clamp(0.85rem, 2vw, 20px);
 }
 
 .profile-field {
@@ -76,6 +88,7 @@
   transform: translate(calc(-50vw + 120px), calc(50vh - 300px));
   transition: transform 0.6s ease-in-out, flex-direction 0.6s ease-in-out;
   will-change: transform;
+
   i {
     font-size: 1.8rem;
     cursor: pointer;
@@ -88,5 +101,70 @@
   i {
     font-size: 2rem;
     cursor: pointer;
+  }
+}
+
+/* ========================
+   RESPONSIVE BREAKPOINTS
+   ======================== */
+
+@media (max-width: 768px) {
+  .main-profile-navbar {
+    img {
+      max-width: 6rem;
+    }
+
+    .top-section {
+      gap: 0.75rem;
+    }
+  }
+
+  .link-section {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0.5rem 0;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .link-section-right {
+    flex-direction: row;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-profile-navbar {
+    width: 96%;
+
+    img {
+      max-width: 4rem;
+    }
+
+    .top-section {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bottom-section {
+      flex-direction: column;
+    }
+  }
+
+  .welcome-section {
+    gap: 0.15rem;
+  }
+
+  .profile-field {
+    margin: 0.25rem;
+    padding: 0.35rem;
+    font-size: 0.85rem;
   }
 }
