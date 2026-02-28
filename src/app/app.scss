@@ -5,6 +5,19 @@
   overflow-x: hidden;
 }
 
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 4rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .main {
+    padding: 1rem 2rem;
+  }
+}
+
 .menu-width {
   width: 80px;
   min-width: 80px;

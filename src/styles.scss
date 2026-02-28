@@ -74,3 +74,22 @@ $app-icon-l-font-size: 2rem !default;
 .pi {
   color: var(--p-primary-color);
 }
+
+@media (max-width: 768px) {
+  span {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  span {
+    font-size: 0.8rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+}

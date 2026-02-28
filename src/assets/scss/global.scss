@@ -13,7 +13,19 @@
 }
 
 .span-brackets {
-  font-size: 13px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .span-brackets {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .span-brackets {
+    font-size: 0.6rem;
+  }
 }
 
 .icon-l-size {
@@ -22,4 +34,10 @@
 
 .mt-12 {
   margin-top: 12rem;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
