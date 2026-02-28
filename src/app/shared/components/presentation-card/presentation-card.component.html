@@ -7,8 +7,10 @@
         </div>
         <div class="presentation-card-field" [tooltipPosition]="'left'" [pTooltip]="'education.university' | translate ">
           <i class="pi pi-graduation-cap mr-2"></i>
-          <span>{{education?.place | translate}}</span>
-          <span class="span-brackets ml-1">({{'education.faculty' | translate }} {{education?.faculty | translate}})</span>
+          <div class="flex align-items-baseline flex-wrap">
+            <span>{{education?.place | translate}}</span>
+            <span class="span-brackets ml-1">({{'education.faculty' | translate }} {{education?.faculty | translate}})</span>
+          </div>
         </div>
         <div class="presentation-card-field" [pTooltip]="'education.field' | translate ">
           <i class="pi pi-book mr-2"></i>
@@ -47,8 +49,10 @@
         </div>
         <div class="presentation-card-field" [tooltipPosition]="'left'" [pTooltip]="'professionalExperience.company' | translate ">
           <i class="pi pi-map-marker mr-2"></i>
-          <span>{{professionalExperience?.place | translate}}</span>
-          <span class="span-brackets ml-1">({{professionalExperience?.placeLocation | translate}})</span>
+          <div class="flex align-items-baseline flex-wrap">
+            <span>{{professionalExperience?.place | translate}}</span>
+            <span class="span-brackets ml-1">({{professionalExperience?.placeLocation | translate}})</span>
+          </div>
         </div>
         <div class="presentation-card-field" [pTooltip]="'professionalExperience.field' | translate ">
           <i class="pi pi-book mr-2"></i>

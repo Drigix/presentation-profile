@@ -4,20 +4,20 @@
 
   .presentation-card-img {
     cursor: pointer;
-    position: absolute;
+    //position: absolute;
     top: -90px;
     right: -5px;
     z-index: 2;
 
     img {
-      height: 5rem;
+      height: 3.5rem;
       display: block;
     }
   }
 
   .presentation-card-company-img {
     cursor: pointer;
-    position: absolute;
+    //position: absolute;
     top: -80px;
     right: -5px;
     z-index: 2;
@@ -30,13 +30,13 @@
 
   .presentation-card-course-company-img {
     cursor: pointer;
-    position: absolute;
+    //position: absolute;
     top: -100px;
     right: -1px;
     z-index: 2;
 
     img {
-      height: 5rem;
+      height: 3.5rem;
       display: block;
     }
   }
@@ -65,4 +65,11 @@
   i {
     font-size: 1.2rem;
   }
+}
+
+:host ::ng-deep .p-image-original {
+  max-width: 60vw !important;
+  position: absolute;
+  top: 5%;
+  left: 11% !important;
 }
