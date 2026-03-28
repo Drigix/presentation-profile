@@ -4,14 +4,19 @@
       <span class="grey-text">{{ 'home.welcome' | translate }}</span>
       <span class="welcome-names">{{profile?.firstName?.toUpperCase() + ' ' + profile?.lastName?.toUpperCase()}}</span>
       <span class="work-title-name">{{'home.workTitle' | translate}}</span>
+      <div class="link-section" [ngClass]="{'link-section-right': selectedMenuItem?.key !== 'profile'}">
+        @for(link of profile?.profileLinks; track link.type) {
+          <i [ngClass]="link.icon + ' mx-1'" (click)="openPage(link.url!)" [pTooltip]="link.url"></i>
+        }
+      </div>
     </div>
     <img alt="profile_img" [src]="profile?.img">
   </div>
-  <div class="link-section" [ngClass]="{'link-section-right': selectedMenuItem?.key !== 'profile'}">
-    @for(link of profile?.profileLinks; track link.type) {
-      <i [ngClass]="link.icon" (click)="openPage(link.url!)" [pTooltip]="link.url"></i>
-    }
-  </div>
+<!--  <div class="link-section" [ngClass]="{'link-section-right': selectedMenuItem?.key !== 'profile'}">-->
+<!--    @for(link of profile?.profileLinks; track link.type) {-->
+<!--      <i [ngClass]="link.icon" (click)="openPage(link.url!)" [pTooltip]="link.url"></i>-->
+<!--    }-->
+<!--  </div>-->
   @if(selectedMenuItem?.key === 'profile') {
     <div class="bottom-section mt-5">
       <div class="contact-section">

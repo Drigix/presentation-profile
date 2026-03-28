@@ -75,34 +75,40 @@
 }
 
 .link-section {
-  position: absolute;
-  top: 70px;
-  right: 20px;
-
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-
-  transform: translate(calc(-50vw + 120px), calc(50vh - 300px));
-  transition: transform 0.6s ease-in-out, flex-direction 0.6s ease-in-out;
-  will-change: transform;
-
+  //position: absolute;
+  //top: 70px;
+  //right: 20px;
+  //
+  //display: flex;
+  //flex-direction: row;
+  //gap: 10px;
+  //justify-content: center;
+  //align-items: center;
+  //
+  //transform: translate(-44vw, 6vh);
+  //transition: transform 0.6s ease-in-out, flex-direction 0.6s ease-in-out;
+  //will-change: transform;
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0.5rem 0;
   i {
     font-size: 1.8rem;
     cursor: pointer;
   }
 }
 
-.link-section-right {
-  flex-direction: column;
-  transform: translate(0, 0);
-  i {
-    font-size: 2rem;
-    cursor: pointer;
-  }
-}
+//.link-section-right {
+//  flex-direction: column;
+//  transform: translate(0, 0);
+//  i {
+//    font-size: 2rem;
+//    cursor: pointer;
+//  }
+//}
 
 /* ========================
    RESPONSIVE BREAKPOINTS
