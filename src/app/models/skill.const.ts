@@ -117,7 +117,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'SQL',
     label: 'skill.sql',
-    img: 'https://www.netgen.co.za/wp-content/uploads/2023/05/SQL-Database.png',
+    img: 'https://www.svgrepo.com/show/331760/sql-database-generic.svg',
     techCategory: TechCategory.DATABASE,
     rating: 5
   },
@@ -131,7 +131,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'POSTGRESQL',
     label: 'skill.postgresql',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1163px-Postgresql_elephant.svg.png',
+    img: 'https://www.svgrepo.com/show/354200/postgresql.svg',
     techCategory: TechCategory.DATABASE,
     rating: 4.5
   },
@@ -187,7 +187,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'JENKINS',
     label: 'skill.jenkins',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/1483px-Jenkins_logo.svg.png',
+    img: 'https://www.svgrepo.com/show/373699/jenkins.svg',
     techCategory: TechCategory.CICD,
     rating: 3.5
   },
@@ -229,7 +229,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'AWS',
     label: 'skill.aws',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
+    img: 'https://www.svgrepo.com/show/448266/aws.svg',
     techCategory: TechCategory.CLOUD,
     rating: 3
   },
