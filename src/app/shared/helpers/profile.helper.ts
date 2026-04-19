@@ -164,7 +164,7 @@ export class ProfileHelper {
       {
         company: 'AWS',
         companyUrl: 'https://aws.amazon.com/?nc2=h_home&refid=0286ac9e-9310-49a6-a802-62e1334c411a',
-        companyImg: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1024px-Amazon_Web_Services_Logo.svg.png',
+        companyImg: '../../../assets/images/aws-logo.png',
         courseName: 'AWS Academy Graduate - AWS Academy Cloud Foundations',
         courseImg: '../../../assets/images/AWS_CLOUD_FOUNDATIONS.png',
         date: new Date(2025, 4, 1),

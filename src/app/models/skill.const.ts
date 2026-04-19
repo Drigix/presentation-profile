@@ -12,7 +12,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'TYPESCRIPT',
     label: 'skill.typescript',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png',
+    img: '../../assets/images/typescript-logo.png',
     techCategory: TechCategory.FRONTEND,
     rating: 5
   },
@@ -89,7 +89,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'PYTHON',
     label: 'skill.python',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/2048px-Python-logo-notext.svg.png',
+    img: '../../assets/images/python-logo.png',
     techCategory: TechCategory.BACKEND,
     rating: 3.5
   },
@@ -194,7 +194,7 @@ export const CONST_SKILLS: Skill[] = [
   {
     code: 'TEAMCITY',
     label: 'skill.teamcity',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/TeamCity_Icon.svg/2048px-TeamCity_Icon.svg.png',
+    img: '../../assets/images/teamcity-logo.png',
     techCategory: TechCategory.CICD,
     rating: 3.5
   },
